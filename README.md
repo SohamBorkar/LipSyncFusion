@@ -90,10 +90,6 @@ After the process completes, the output video (`result_video.mp4`) will be saved
 - **CUDA Warning:** If you do not have an NVIDIA GPU, the script will fall back to CPU. This warning is expected and can be ignored if you’re running on CPU.
 - **Dependency Issues:** Ensure that all dependencies are correctly installed. If you encounter build errors, try installing the `wheel` package (`pip install wheel`) and verify the versions in `requirements.txt`.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [Wav2Lip](https://github.com/Rudrabha/Wav2Lip)
@@ -102,5 +98,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or issues, please open an issue in the repository or contact [your_email@example.com].
+For questions or issues, please open an issue in the repository or contact [sohamborkar14@gmail.com].
 

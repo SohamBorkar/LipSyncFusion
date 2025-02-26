@@ -10,8 +10,11 @@ LipSyncFusion is an end-to-end lip-sync solution that combines the power of the 
 
 ## Prerequisites
 
-- **Python:** 3.8 or higher
-- **ffmpeg:** Required for video processing ([Download ffmpeg](https://ffmpeg.org/download.html))
+- **Python:** 3.6 or higher
+- **ffmpeg:** Required for video processing ([Install ffmpeg](https://ffmpeg.org/download.html))
+  ```bash
+  sudo apt-get install ffmpeg
+  ```
 - **Optional:** NVIDIA GPU with CUDA for accelerated inference (the project will run on CPU if no GPU is available)
 
 ## Installation
@@ -20,7 +23,7 @@ LipSyncFusion is an end-to-end lip-sync solution that combines the power of the 
 
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your_username/LipSyncFusion.git
+git clone https://github.com/SohamBorkar/LipSyncFusion.git
 cd LipSyncFusion
 ```
 
@@ -34,15 +37,20 @@ source venv/bin/activate
 
 ### 3. Install Dependencies
 
-Install the required dependencies using the provided requirements file from the Wav2Lip repository:
+Install the required dependencies using the provided requirements file:
 ```bash
-pip install -r Wav2Lip/requirements.txt
+pip install -r requirements.txt
 ```
-*If you maintain a combined `requirements.txt` in the root, use that file instead.*
+Alternatively, instructions for using a docker image are provided [here](https://github.com/Rudrabha/Wav2Lip/issues/175#issuecomment-864222024). Have a look at this comment and comment on the gist if you encounter any issues.
 
 ### 4. Download the Pretrained Model
 
 Download the pretrained Wav2Lip checkpoint (e.g., `wav2lip_gan.pth`) as per the instructions in the [Wav2Lip repository](https://github.com/Rudrabha/Wav2Lip) and place it in the `Wav2Lip/checkpoints/` folder.
+
+### 5. Face Detection Pretrained Model
+
+The face detection pre-trained model should be downloaded to `face_detection/detection/sfd/s3fd.pth`. 
+[Alternative link](https://drive.google.com/file/d/1pjG8fB8p6fFGAePqBpG-LKjp0hT-KQFj/view?usp=sharing) if the above does not work.
 
 ## Project Structure
 
@@ -84,6 +92,10 @@ python Wav2Lip/inference.py --checkpoint_path Wav2Lip/checkpoints/wav2lip_gan.pt
 ```
 After the process completes, the output video (`result_video.mp4`) will be saved in the `outputs/` folder.
 
+## Results
+
+The generated results are stored in the `/outputs` folder. You can download them and view the results. Please check all outputs in the /outputs folder to see the final generated videos.
+
 ## Troubleshooting
 
 - **File Not Found:** Verify that the paths provided to the `--face` and `--audio` arguments are correct. Adjust the paths if needed (use relative or absolute paths).
@@ -98,5 +110,5 @@ After the process completes, the output video (`result_video.mp4`) will be saved
 
 ## Contact
 
-For questions or issues, please open an issue in the repository or contact [sohamborkar14@gmail.com].
+For questions or issues, please open an issue in the repository or contact sohamborkar14@gmail.com.
 
